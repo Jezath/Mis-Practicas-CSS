@@ -1,0 +1,336 @@
+* {
+  /* outline: 1px solid red; */
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin-top: 100vh;
+  background-color: #606060;
+  transition: filter 0.3s ease;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Mostrar el menú y desenfocar el fondo */
+body:has(#menu-toggle:checked) nav {
+  right: 0;
+}
+
+body:has(#menu-toggle:checked){
+  overflow: hidden;
+}
+
+body:has(#menu-toggle:checked) main {
+  filter: blur(4px);
+}
+
+/* Estilos del header fixed */
+header {
+  position: fixed;
+	top: 0;
+  z-index: 3;
+
+  width: 100%;
+  height: 100vh;
+  font-size: 1.125rem;
+  background-color: black;
+
+  background-image: url(img/Neon\ Genesis\ Evangelion\ Logo.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  animation: sticky-parallax-header-move-and-size linear forwards;
+	animation-timeline: scroll();
+	animation-range: 0vh 90vh;
+}
+
+/* Animación del header */
+@keyframes sticky-parallax-header-move-and-size {
+	to {
+		background-position: 50% 0%;
+    /* background-size: 0%; */
+		height: 9vh;
+	}
+}
+
+/* Header interno para controlar el ancho y los elementos internos */
+.header {
+  width: min(90%, 1200px);
+  height: 100%;
+  margin: auto;
+  opacity: 0;
+  color: transparent;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  animation: appearHeader linear forwards;
+  animation-timeline: scroll();
+  animation-range: 0vh 90vh;
+}
+
+@keyframes appearHeader {
+  to {
+    opacity: 1;
+    color: aliceblue;
+  }
+}
+
+/* Estilos del boton de menú en modo móvil */
+.menu-button {
+  font-size: 1.25rem;
+  cursor: pointer;
+  user-select: none;
+  z-index: 4;
+}
+
+/* quita el check del input en modo móvil */
+input#menu-toggle {
+  display: none;
+}
+
+/* Estilos del menú lateral en modo móvil */
+.menu-nav {
+  position: fixed;
+  top: 9vh;
+  right: -100%;
+  z-index: 1;
+
+  width: 75%;
+  max-width: 300px;
+  height: 100vh;
+  padding-top: 64px;
+  background-color: #ef4219;
+
+  transition: right 0.3s ease-in-out;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 32px;
+}
+
+.menu-nav a {
+  text-decoration: none;
+  color: transparent;
+
+  animation: appearHeader linear forwards;
+}
+
+
+/* Principal Main */
+main {
+  position: relative;
+  z-index: 1;
+
+  width: min(90%, 1200px);
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  line-height: 1.5;
+}
+
+section {
+  padding: 32px 16px;
+}
+
+section :is(h2, p) {
+  margin-bottom: 16px;
+}
+
+/* Section 1 */
+.sec-1 {
+  background-color: #f1a86e;
+  letter-spacing: 1px; /* espacio entre las letras */
+  word-spacing: 5px; /* espacio entre las palabras */
+}
+
+.sec-1 > h2 {
+  font-weight: 600; /* peso de la negrita */
+  text-decoration: overline; /* decoración del texto */ 
+}
+
+.sec-1 p {
+  text-indent: 16px; /* sangría de la primera línea. */
+  text-align: left; /* forma de alinear el texto */
+}
+
+.sec-1 h2 + p::first-letter {
+  font-size: 32px;
+}
+
+.sec-1 :is(h2, p)::selection {
+  background-color: #ef4219; /* fondo de las palabras */
+}
+
+
+/* Section 2 */
+.sec-2 {
+  color: whitesmoke;
+  background-color: #2d2d2d;
+}
+
+.sec-2 :is(h2, p)::selection {
+  color: #ef4219;
+}
+
+
+/* Section 3 */
+.sec-3 {
+  background-color: #f1a86e;
+}
+
+.sec-3 :is(h2, p)::selection {
+  color: whitesmoke;
+  background-color: #ef4219;
+}
+
+.img-izquierda {
+  float: left;
+  margin: 0 16px 16px 0;
+}
+
+.img-derecha {
+  float: right;
+  margin: 0 0 16px 16px;
+}
+
+.img-centrada {
+  display: block;
+  margin: 20px auto;
+}
+
+
+/* Section 4 */
+.sec-4 {
+  color: whitesmoke;
+  background-color: #2d2d2d;
+}
+
+.clip-circ {
+  float: left;
+  
+  width: 200px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
+  
+  shape-outside: circle(50%) content-box;
+  shape-margin: 16px;
+  margin-right: 16px;
+}
+
+.sec-4 :is(h2, p)::selection {
+  text-shadow: 1px 1px 3px #ef4219; /* sombra del texto */
+}
+
+
+/* Section 5 */
+
+.sec-5 {
+  display: flex;
+  display: flex;
+  flex-direction: column;
+
+  background-color: #f1a86e;
+}
+
+.sec-5 > div {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 80%;
+  max-width: 300px;
+  padding: 16px;
+  background: #606060;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  /* scroll-padding: 16px; */ /* opcional */
+}
+
+.item {
+  width: 200px;
+  height: 200px;
+  background: red;
+  color: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  scroll-snap-align: start;
+  scroll-margin: 16px;
+}
+
+.item:first-child {
+  background-image: url(https://animeargentina.net/wp-content/uploads/2022/06/Asi-luce-Shinji-Ikari-convertido-en-una-waifu-con-fanart-de-Neon-Genesis-Evangelion-1_compress20.jpg);
+  background-size: cover;
+}
+.item:nth-child(2) {
+  background-image: url(https://zerojustice315.wordpress.com/wp-content/uploads/2016/02/310510.png);
+  background-size: cover;
+  background-position: right;
+}
+.item:nth-child(3) {
+  background-image: url(https://i.pinimg.com/736x/2c/f7/90/2cf79084edf76d321ae6e134207146b9.jpg);
+  background-size: cover;
+}
+.item:nth-child(4) {
+  background-image: url(https://images8.alphacoders.com/661/thumb-1920-661568.jpg);
+  background-size: cover;
+}
+.item:last-child {
+  background-image: url(https://preview.redd.it/i-guess-i-get-that-different-glasses-mean-different-things-v0-dzavaaiuxynb1.jpeg?width=750&format=pjpg&auto=webp&s=810e0743ef3c6af3167990add1dd6ef58a09d90e);
+  background-size: cover;
+}
+
+
+/* Media Queries */
+@media (width >= 847px) {
+  .menu-button {
+    display: none;
+  }
+
+  .menu-nav {
+    background-color: black;
+    position: static;
+    width: 100%;
+    height: auto;
+    padding-top: 0;
+    font-size: 16px;
+
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+  }
+
+  body:has(#menu-toggle:checked) main {
+    filter: none;
+  }
+
+  .sec-2 {
+    column-count: 3;
+    column-width: 300px;
+    column-gap: 32px;
+    /* atajo */
+    /* columns: 3 300px; */
+  }
+}

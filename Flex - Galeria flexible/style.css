@@ -1,0 +1,23 @@
+* {
+  /* outline: 1px solid red; */
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.container {
+  margin: 40px auto;
+  width: min(1200px, 80%);
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+}
+
+.img {
+  width: min(276px, 100%);
+  height: auto;
+}

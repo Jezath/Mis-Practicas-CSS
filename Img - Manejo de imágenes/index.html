@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manejo de imágenes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="container">
+
+    <section class="sect">
+      
+      <!-- Imágen con un contenedor (figure o div) -->
+      <figure>
+        <img src="https://pbs.twimg.com/media/GbJtRtAWgA4G5zJ?format=jpg&name=medium" alt="figure">
+      </figure>
+
+      <!-- Imágen insertada mediante backgraund-img -->
+      <div>
+      </div>
+
+      <!-- Imágen directa mediante img -->
+      <img src="https://pbs.twimg.com/media/F5_zaTHXwAA7MPD?format=jpg&name=large" alt="img">
+
+    </section>
+
+
+    <section class="sect-2">
+
+      <!-- Imágen responsive en un contenedor, mantiene su aspecto -->
+      <figure>
+        <img src="https://pbs.twimg.com/media/F6ZsCqvWYAAKMkO?format=jpg&name=large" alt="figure">
+      </figure>
+
+      <!-- Imágen insertada mediante backgraund-img -->
+      <div>
+      </div>
+      
+      <!-- Imágen con forma redonda -->
+      <img src="https://pbs.twimg.com/media/F6pChXJXoAAEYCY?format=jpg&name=large" alt="img" class="redond">
+      
+    </section>
+
+
+    <section class="sect-3">
+
+      <!-- Manejo de diferentes tamaños de imágenes dependiendo del viewport -->
+      <picture>
+        <!-- 
+        <source media="(width >= 900px)" srcset="img/large.jpg">
+        <source media="(width >= 600px) and (width < 900px)" srcset="img/medium.jpg">
+        <source media="(width < 600px)"srcset="img/small.jpg"> 
+        -->
+        <img src="img/small.jpg" alt="HTML5 logo">
+      </picture>
+
+      <!-- Imágen pequeña con ::before -->
+      <div class="icon">Texto con ícono</div>
+
+      <!-- Imagén con sombra degradado -->
+      <div class="card">
+        <h3>Bugsy</h3>
+      </div>
+
+    </section>
+
+  </main>
+  
+</body>
+</html>

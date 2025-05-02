@@ -1,0 +1,332 @@
+* {
+  /* outline: 1px solid red; */
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #fbe5e5;
+}
+
+.card-container {
+  width: min(1300px, 90%);
+  margin: 40px auto;
+  padding: 16px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+}
+
+
+/* Estilos de las card generales */
+.card {
+  width: 350px;
+  min-height: 600px;
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.card_img {
+  width: 100%;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.card_info {
+  padding: 16px;
+  line-height: 1.5;
+  border-radius: 0 0 8px 8px;
+
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 16px;
+
+  h3 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+
+
+/* Estilos de los botones generales */
+.card_btn
+{
+  margin-top: auto;
+  font-size: inherit;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+/* Estilos de las card específicas */
+
+/* Card Asuka */
+.card-asuka {
+  background-color: #bec9e0;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.675); 
+}
+
+.card-asuka .card_btn {
+  background-color: #e24628;
+}
+
+
+/* Card Rei */
+.card-rei {
+  background-color: #acc3d8;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2); 
+}
+
+.card-rei .card_btn {
+  background-color: #3c6c9e;
+}
+
+
+/* Card Shinji */
+.card-shinji {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+  background-color: #a9c8d1;
+}
+
+.card-shinji .card_btn {
+  background-color: #3d5a61;
+}
+
+.card_btn:hover {
+  background-color: #132a45;
+  transform: translateY(-2px);
+}
+
+
+/* Card de Kaworu */
+.card-kaworu {
+  width: 350px;
+  line-height: 1.5;
+  border-radius: 8px;
+  min-height: 600px;
+  background-color: #50a5cce0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.card-kaworu_figure {
+  aspect-ratio: 3/2;
+}
+
+.card-kaworu_img {
+  border-radius: 8px 8px 0 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-kaworu_info {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 16px;
+
+  h3 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+
+.card-kaworu_info > button {
+  background-color: #116189;
+}
+
+.card-kaworu_info > button:hover {
+  background-color: #132a45;
+  transform: translateY(-2px);
+}
+
+
+/* Card responsive con flex y media querys */
+.flex-card {
+  width: 90%;
+  max-width: 350px;
+  
+  line-height: 1.5;
+  border-radius: 8px;
+  background-color: #efe0ed;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.flex1 {
+  aspect-ratio: 3/2;
+}
+
+.flex1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.flex2 {
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  h3 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+
+.flex2 button {
+  margin-top: auto; /* empuja el botón al final de la card, su padre tiene que ser flex column */
+  font-size: inherit;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  background-color: #644c84;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.flex2 button:hover {
+  background-color: #351c3a; 
+  transform: translateY(-2px);
+}
+
+
+/* Media querys */
+@media (849px <= width <= 1273px) {
+  .flex-card {
+    background-color: #f3ceee;
+    max-width: 732px;
+    min-height: 350px;
+    flex-direction: row;
+  }
+
+  .flex1 {
+    width: 50%;
+    height: 100%;
+    aspect-ratio: 1/1;
+  }
+
+  .flex1 img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px 0 0 8px;
+  }
+
+  .flex2 {
+    width: 50%;
+    height: auto;
+  }
+}
+
+
+/* Card responsive con grid y media querys */
+.grid-card {
+  width: 90%;
+  max-width: 350px;
+
+  line-height: 1.5;
+  border-radius: 8px;
+  background-color: #cec6c3d8;
+
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.grid1 {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 3/2;
+}
+
+.grid1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.grid2 {
+  padding: 16px;
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  /*
+    auto → La primera fila (título) toma solo el alto necesario para su contenido.
+    1fr  → La segunda fila (párrafo) toma todo el espacio restante disponible.
+    auto → La tercera fila (botón) también toma solo lo que necesite su contenido.
+  
+    - El título y el botón tendrán su tamaño natural.
+
+    - El párrafo (segunda fila) se expandirá o encogerá para rellenar el espacio disponible, lo que empuja el botón hacia abajo.
+  */
+
+  gap: 16px;
+
+  h3 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+
+.grid2 button {
+  font-size: inherit;
+  color: whitesmoke;
+  background-color: #5c3028;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.grid-card button:hover {
+  background-color: #391c17;
+  transform: translateY(-2px);
+}
+
+
+/* Media querys */
+@media (849px <= width <= 1273px) {
+  .grid-card {
+    max-width: 732px;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: max-content;
+    align-items: center;
+  }
+
+  .grid1 {
+    aspect-ratio: inherit;
+    /*
+      aspect-ratio: inherit;
+        - Aquí se indica que el elemento .grid1 ya no va a usar su propio aspect-ratio: 3/2, sino que va a heredar el aspect-ratio de su elemento padre (si este tuviera uno).
+  
+        - Si el padre no tiene un aspect-ratio definido, entonces simplemente no se aplicará ninguno, y la caja tomará forma basada en otras propiedades (width, height, contenido, etc.).
+    */
+  }
+
+  .grid1 img {
+    object-fit: cover;
+    border-radius: 8px 0 0 8px;
+  }
+}

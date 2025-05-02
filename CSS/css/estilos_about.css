@@ -1,0 +1,14 @@
+/* Estilos específicos para about.html */
+body {
+  background-color: lightgreen;
+}
+h1 {
+  color: green;
+  text-align: center;
+  margin-top: 20px;
+}
+
+section {
+  margin: auto;
+  width: 800px;
+}

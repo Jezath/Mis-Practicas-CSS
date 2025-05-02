@@ -1,0 +1,9 @@
+/* Estilos específicos para index.html */
+body {
+  background-color: lightblue;
+}
+h1 {
+  color: navy;
+  text-align: center;
+  margin-top: 20px;
+}

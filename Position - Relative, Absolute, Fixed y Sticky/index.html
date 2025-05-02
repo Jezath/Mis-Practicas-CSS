@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Position</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>Header - Fixed</header>
+
+  <main id="top">
+
+    <!-- Tipos de position -->
+    <section class="re-div">
+
+      <!-- div 1 -->
+      <div class="a">Absolute al html</div>
+
+      <!-- div 2 -->
+      <div class="b">
+        Relative
+        <div class="b1">Absolute al Relative</div>
+      </div>
+
+      <!-- div 3 -->
+      <div>
+        <div class="c"></div>
+        <div class="c1">Relative</div>
+      </div>
+
+    </section>
+
+
+    <!-- Position Absolute -->
+    <section class="re-ab">
+
+      <div class="contenedor">
+        <div class="medio">
+          <div class="elemento">Absolute</div>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- Position Sticky -->
+    <section class="st-div">
+
+      <!-- Sticky al html -->
+      <div class="cont">
+        <h3>Position Sticky HTML</h3>
+        <h3>Atenea</h3>
+        <p>
+          Atenea (Ariana en inglés) es una ejecutiva del Team Rocket en la Cuarta generación hace su aparición con sus Pokémon.
+          Su ropa en la segunda generación es de color rojo, mientras en la cuarta generación es de color blanco; su peinado cambia igual con respecto a la generación. Guarda cierto parecido con Plata y Venus.
+        </p>
+        <div class="elem">Texto posicionado con Sticky</div>
+        <p>
+          Su nombre proviene de Atenea, diosa de la guerra justa y la sabiduría en la mitología griega (pese a que ella es una villana y no es justa en combate).
+        </p>
+        <p>
+          Aparece por primera vez en el Pueblo Caoba, donde lucha en un combate doble contra el jugador y Lance. La acompaña un soldado Rocket.
+        </p>
+        <h3>Citas:</h3>
+        <p>
+          ¡Con críos como tú entrometiéndose todo el tiempo el orgullo del Team Rocket está continuamente en juego!
+          Y ya basta de palabrería. Vamos a poner fin a esto de una vez.
+        </p>
+        <p>
+          Por muy fuerte que seas, no tienes ninguna posibilidad con nosotros dos al mismo tiempo.
+        </p>
+      </div>
+
+      <!-- Sticky al contenedor -->
+      <div class="cont2">
+        <h3>Position Sticky Container</h3>
+        <h3>Equipo Rocket</h3>
+        <p>
+          El Team Rocket en España o Equipo Rocket en Hispanoamérica es una asociación ilícita con fines criminales fundada por Madame Boss y que ahora está bajo el mando de su hijo, Giovanni.
+        </p>
+        <div class="elem2">Texto posicionado con Sticky</div>
+        <p>
+          Giovanni también quiere tener una colección de los Pokémon más fuertes del mundo y usa a su equipo para hacerlo. La sede central se encuentra en la región Kanto; para ser más precisos, en Ciudad Verde, pero el Team/Equipo Rocket cuenta con miembros activos en más regiones.
+        </p>
+        <h3>Integrantes</h3>
+        <p>
+          Los miembros que forman del Team/Equipo Rocket son a menudo llamados Soldados Rocket. Además de estos, hay otros personajes que destacan sobre los demás por su relevancia.
+          Jessie, James y Meowth
+          Team Rocket (serie original)
+          Team/Equipo Rocket en series anteriores.
+
+          Jessie y James son dos miembros muy determinados y persistentes de esta organización que viajan con un Meowth parlante que su jefe les asignó. Meowth, a pesar de ser un Pokémon, parece ser el que más piensa de estos tres, ya que muchos de los planes son suyos y él siempre opera la maquinaria pesada que usan para robar Pokémon.
+        </p>
+        <p>
+          Se vio cómo los tres se juntaron como equipo villano en el episodio Entrenamiento a tope (ES) / Recuerdo de entrenamiento (HA) ‹№›.
+          Sus nombres están basados en un ladrón muy conocido de Estados Unidos llamado Jesse James, forajido estadounidense e integrante más famoso de la banda de asaltantes James-Younger.
+          Aparecen en casi todos los episodios de la serie, generalmente tratando de robar al Pikachu de Ash o a los Pokémon que aparecen en el episodio, para presentárselos a Giovanni. Tienen un globo aerostático (su principal medio de transporte) con aspecto de un Meowth o la de un Wobbuffet, y un submarino con aspecto de un Magikarp o un Gyarados.
+        </p>
+      </div>
+      
+    </section>
+
+
+    <!-- Cards con position -->
+    <section class="re-card">
+
+      <!-- Zoom imágen con Position -->
+      <div class="card1 card">
+        <img src="https://den-cards.pokellector.com/413/Team-Rockets-Ariana.SV10.128.57159.png" alt="Imagen de fondo">
+        <div class="card-text">Zoom Position</div>
+      </div>
+
+      <!-- Zoom imágen con background-img -->
+      <div class="card2 card">
+        <p>Zoom Background</p>
+      </div>
+
+      <!-- Desenfoque imágen con Position -->
+      <div class="card3 card">
+        <img src="https://den-cards.pokellector.com/413/Team-Rockets-Ariana.SV10.128.57159.png" alt="Imagen de fondo">
+        <div class="card3-context">
+          <p>Descenfoque Position</p>
+        </div>
+      </div>
+      
+      <!-- Article sobrepuesto con position -->
+      <div class="card4 card">
+        <img src="https://den-cards.pokellector.com/413/Team-Rockets-Ariana.SV10.128.57159.png" alt="Ariana">
+        <article>
+          <p>Ariana</p>
+        </article>
+      </div>
+
+    </section>
+
+
+    <!-- Modal -->
+    <section class="ab-mod">
+
+      <!-- Elementos sobrepuestos -->
+      <div class="cont-zind">
+        <div class="zind"></div>
+        <div class="zind"></div>
+        <div class="zind"></div>
+      </div>
+
+      <!-- Modal -->
+      <dialog>
+        <h3>Atenea</h3>
+        <p>¡Qué lástima! Si te unieras al Team Rocket, podrías llegar a ser Ejecutivo.</p>
+        <button id="closeBtn">Cerrar</button>
+      </dialog>
+      <div class="modal-btn">
+        <button id="openBtn">Ver cita de Atenea</button>
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <Footer>Footer</Footer>
+
+
+  <!-- Botón fijo -->
+  <a href="#top">
+    <div class="fixed-btn">Fixed</div>
+  </a>
+
+
+  <!-- JavaScript para la modal -->
+  <script>
+    const dialog = document.querySelector('dialog');
+
+    document.querySelector('#openBtn').addEventListener('click', () => {
+      dialog.showModal();
+      document.body.classList.add('modal-abierto'); 
+    })
+    document.querySelector('#closeBtn').addEventListener('click', () => {
+      dialog.close();
+      document.body.classList.remove('modal-abierto');
+    })
+  </script>
+  
+</body>
+</html>

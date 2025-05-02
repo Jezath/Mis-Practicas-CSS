@@ -1,0 +1,25 @@
+* {
+  /* outline: 1px solid red; */
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.container {
+  margin: 40px auto;
+  width: min(1200px, 80%);
+
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(min(250px, 100%), 1fr)
+  );
+  gap: 32px;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+}
