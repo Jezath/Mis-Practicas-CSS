@@ -17,3 +17,8 @@ main {
   width: min(80%, 1200px);
   margin: auto;
 }
+
+a {
+  display: block;
+  margin-bottom: 16px;
+}
