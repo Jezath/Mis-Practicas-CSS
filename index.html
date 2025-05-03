@@ -9,16 +9,41 @@
   <link rel="stylesheet" href="style.css">
 
   <meta name="theme-color" content="#232946">
-  <link rel="icon" type="image/png" href="assets/dev-favicon.png">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
 <body>
 
   <!-- Header -->
-  <header></header>
+  <header>
+
+    <div class="div-1">
+      <img src="" alt="Logo">
+
+      <nav>
+        no se
+      </nav>
+    </div>
+
+    <div class="div-2">
+
+      <div class="sect fade-right">
+        <h2>title</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium et sed veniam repellat nulla perferendis, rem laudantium iusto, id explicabo, sunt quasi adipisci voluptatem animi eveniet itaque eum! Nihil, facere.</p>
+        <button>coming soon</button>
+      </div>
+
+      <div class="sect fade-left">
+        <img src="img/imagen prueba 2.png" alt=""
+        style="width: 250px;">
+      </div>
+
+    </div>
+
+  </header>
 
 
   <!-- Contenido principal -->
-  <main>
+  <main class="sect fade-up">
 
     <h2>Proyectos hechos</h2>
 
@@ -44,13 +69,68 @@
 
   </main>
 
+  <aside class="sect fade-down" >
+
+    <div class="cont">
+
+      <div class="box-0">
+        <div class="contenido-inferior">
+          <span>Texto</span>
+          <button>Botón</button>
+        </div>
+      </div>
+
+      <div class="box-1"></div>
+
+      <div class="box-2">
+        <div class="contenido-inferior">
+          <span>Texto</span>
+          <button>Botón</button>
+        </div>
+      </div>
+      
+    </div>
+
+  </aside>
+
 
   <!-- Footer, contenido extra -->
-  <footer></footer>
+  <footer>footer</footer>
 
 
   <!-- Botón o enlace de subir -->
   <a href="">Up</a>
+
+
+  <!-- JavaScript para las animaciones iniciales -->
+  <script>
+
+    const sections = document.querySelectorAll('.sect');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const index = Array.from(sections).indexOf(el); // índice real en el DOM
+          el.style.transitionDelay = `${index * 150}ms`;
+          el.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    sections.forEach(section => observer.observe(section));
+
+  </script>
+
+
+  <!-- 
+    class="sect fade-left"
+    class="sect fade-right"
+    class="sect fade-up"
+    class="sect fade-down" 
+  -->
+
 
 </body>
 </html>
