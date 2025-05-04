@@ -24,6 +24,9 @@ body {
 }
 
 .container {
+
+  margin: 32px 0;
+
   display: grid;
   grid-auto-columns: 200px;
   grid-auto-rows: 200px;
@@ -166,6 +169,7 @@ button:hover {
 @media (width >= 990px) {
   .container {
     grid-auto-columns: 200px;
+    grid-auto-rows: 250px;
     grid-template-areas: 
       "box-1 box-1 box-4 box-4"
       "box-1 box-1 box-2 box-3"
