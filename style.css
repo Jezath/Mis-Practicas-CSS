@@ -1,5 +1,5 @@
 * {
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
   margin: 0;
   box-sizing: border-box;
 }
@@ -13,6 +13,8 @@ body {
   background-color: #d4d8f0;
 }
 
+
+/* - - - Estilos generales - - - */
 header, footer {
   width: 100%;
 
@@ -20,57 +22,126 @@ header, footer {
   background-color: #232946;
 }
 
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
 p {
   font-size: 18px;
   line-height: 1.5;
-}
-
-
-.header {
-  width: min(90%, 1200px);
-  margin: auto;
-
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-}
-
-.div-1 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.div-2 {
-  display: flex;
-  flex-wrap: wrap;
 }
 
 a {
   text-decoration: none;
 }
 
-/*
-.boton {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
 
-  .boton:hover {
-    background-color: #0056b3;
-  }
-*/
+/* - - - Estilos específicos del header - - - */
+.header {
+  width: min(90%, 1200px);
+  margin: auto;
+}
+
+/* Estilos de la barra de nav fixed */
+.div-1 {
+  background-color: #232946;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.div-1_cont { 
+  width: min(90%, 1200px);
+  margin: auto;
+  padding: 16px 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-nav a {
+  text-decoration: none;
+  color: #d6dbf1;
+  font-size: 20px;
+  margin-left: 16px;
+}
+
+/* Estilos del texto inicial y la imágen */
+.div-2 { 
+  margin-top: 70px;
+  padding: 32px 0 64px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 32px;
+}
+
+.div-2_text  {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+  
+  /* <row-start> / <column-start> / <row-end> / <column-end>  */
+  grid-area: 2 / 1 / 2 / 2; 
+}
+
+.div-2_text > p {
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+/* Estilo del botón del párrafo */
+.div-2_text  > a {
+  display: inline-flex; /* para alinear el texto con el ícono */
+  align-items: center;
+
+  width: max-content;
+  padding: 15px 25px;
+  background-color: #d4939d;
+  color: #232946;
+
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.div-2_text  > a:hover {
+  background-color: #d4d8f0;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.a-icon {
+  margin-left: 8px;
+}
+
+/* Estilos de la imágen al lado del párrafo */
+.div-2_img {
+  /* padding: 32px; */
+  display: grid;
+  place-content: center;
+}
+
+.div-2_img img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  max-width: 500px;
+  height: 100%;
+}
 
 
-/* Sección principal */
+/* - - - Estilos de la sección principal de las prácticas - - - */
 main {
   width: min(90%, 1200px);
   min-height: 100vh;
@@ -102,7 +173,7 @@ main {
 .main-cardclick {
   display: block;
   position: relative;
-  background: linear-gradient(135deg, #fffffe, #f0f0f0);
+  background-color: #fffffe;
   text-decoration: none;
   overflow: hidden;
   color: #232946;
@@ -223,16 +294,16 @@ main {
 }
 
 
-/* Boton fijo */
+/* - - - Boton fijo - - - */
 .fixed-btn {
   width: 45px;
   height: 45px;
   border-radius: 50%;
 
-  color: whitesmoke;
-  background-color: #d4939d;
+  color: #d6dbf1;
+  background-color: #232946;
   font-size: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border: 3px solid #d4939d;
 
   position: fixed;
   bottom: 15px;
@@ -245,7 +316,8 @@ main {
   transform: translateY(10px);
   animation: aparecer linear both;
   animation-timeline: scroll(root);
-  animation-range: 0 400px; /* Empieza al hacer scroll */
+  animation-range: entry 20% 40%; 
+  /* Empieza al hacer scroll, antes: 0 400px */
 }
 
 @keyframes aparecer {
@@ -256,10 +328,9 @@ main {
 }
 
 
-/* Información personal */
+/* - - - Estilos de la sección de información personal - - - */
 .section {
   width: 100%;
-  height: 500px;
   background-color: #eebbc3;
 }
 
@@ -267,6 +338,31 @@ main {
   width: min(90%, 1200px);
   height: 100%;
   margin: auto;
+}
+
+.info-text {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.info-text > div {
+  /* max-width: 450px; */
+  min-width: 250px;
+  flex: 1;
+}
+
+
+/* .info-cont_img {
+  padding: 32px;
+} */
+
+.info-img {
+  display: block;
+  width: 100%;
+  max-width: 450px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  filter: grayscale(0.8);
 }
 
 
@@ -335,4 +431,24 @@ main {
     opacity: 1;
     transform: translateY(0);
   }
-} 
+}
+
+footer {
+  height: 250px;
+}
+
+
+/* - - - Media queries obligado a poner - - - */
+@media (width >= 750px) {
+
+  /* header responsive */
+  .div-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .div-2_text  {
+    /* <row-start> / <column-start> / <row-end> / <column-end>  */
+    grid-area: 1 / 1 / 2 / 2; 
+  }
+
+}

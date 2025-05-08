@@ -16,43 +16,50 @@
   <!-- Header -->
   <header>
 
-    <div class="header">
+    <!-- Contenedor para el limite de ancho interno -->
+    <div class="header" id="top">
 
-      <div class="div-1" id="top">
-        <h2>Logo</h2>
+      <!-- Barra de navegación fixed -->
+      <div class="div-1">
+        <div class="div-1_cont">
+          <h2>JezaDev</h2>
   
-        <nav>
-          <a href="">Prácticas</a>
-          <a href="">About</a>
-        </nav>
+          <nav class="header-nav">
+            <a href="#practicas">Prácticas</a>
+            <a href="#acerca">Acerca</a>
+          </nav>
+        </div>
       </div>
   
-      <div class="div-2">
-  
-        <div class="sect fade-right">
+      <!-- Texto introductorio e imágen -->
+      <div class="div-2" >
+        <div class="div-2_text sect fade-right">
           <h2>CSS</h2>
-          <p>CSS (Cascading Style Sheetes) en español "Hoja de estilo en cascada". Lenguaje de diseño de estilado declarativo. CSS es fundamental en el desarrollo web porque permite separar el contenido de una página (HTML) de su presentación visual, facilitando así el diseño y la personalización de sitios web.</p>
-          <button>coming soon</button>
+          <p>CSS (Cascading Style Sheetes) en español "Hoja de estilo en cascada", es un lenguaje de estilado declarativo. CSS es fundamental en el desarrollo web porque permite separar el contenido de una página (HTML) de su presentación visual, facilitando así el diseño y la personalización de sitios web.</p>
+          <p><strong>¿Quieres saber más sobre CSS?</strong> Revisa mi repositorio en GitHub.</p>
+          <a href="https://github.com/Jezath/CSS">
+            Ir al repositorio
+            <img src="assets/github-logo.png" alt="github" class="a-icon">
+          </a>
         </div>
   
-        <div class="sect fade-left">
-          <img src="img/imagen prueba 2.png" alt=""
-          style="width: 200px;">
+        <div class="div-2_img sect fade-left">
+          <img src="img/imagen prueba 2.png" alt="img" >
         </div>
-  
       </div>
 
     </div>
 
   </header>
 
-
+  
   <!-- Contenido principal -->
-  <main>
+  <div id="practicas"></div>
+  <main >
 
     <div class="main-header">
       <h2>Proyectos CSS</h2>
-      <p>Mira las maravilla visuales que se pueden hacer con CSS.</p>
+      <p>Mira las maravillas visuales que se pueden hacer con CSS.</p>
     </div>
 
     <section class="main-section">
@@ -71,7 +78,7 @@
 
           </div>
 
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci sunt.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci sunt.</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci sunt.Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
 
         </div>
       
@@ -92,7 +99,7 @@
 
           </div>
 
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci sunt.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci sunt.</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci sunt.Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
 
         </div>
 
@@ -112,7 +119,7 @@
 
           </div>
 
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci sunt.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci sunt.</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci sunt.Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
 
         </div>
 
@@ -132,7 +139,7 @@
 
           </div>
 
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci sunt.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci sunt.</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci sunt.Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
 
         </div>
 
@@ -152,7 +159,7 @@
 
           </div>
 
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci sunt.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci sunt.</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci sunt.Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
 
         </div>
 
@@ -172,7 +179,7 @@
 
           </div>
 
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci sunt.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci sunt.</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci sunt.Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
 
         </div>
 
@@ -193,7 +200,7 @@
 
           </div>
 
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci sunt.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci sunt.</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci sunt.Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
 
         </div>
 
@@ -213,7 +220,7 @@
 
           </div>
 
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci sunt.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci sunt.</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci sunt.Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
 
         </div>
 
@@ -221,13 +228,27 @@
 
     </section>
 
+    <div id="acerca"></div>
   </main>
 
 
   <!-- Sección de información personal -->
-  <section class="section">
+  
+  <section class="section" id="acerca">
 
     <div class="section-info">
+    
+    <div class="info-text">
+      <div>
+        <h2>¿Quién está detras de esta página web?</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, ea consectetur aperiam doloremque non reprehenderit expedita iure rem ipsum soluta veniam inventore laboriosam qui itaque animi deleniti vero similique nobis!</p>
+      </div>
+
+      <figure class="info-cont_img">
+        <img src="img/foto perfil.jpg" alt="foto de perfil" class="info-img">
+      </figure>
+    </div>
+
 
       <!-- 
       <aside class="sect fade-down" >
@@ -265,7 +286,7 @@
 
   <!-- Botón o enlace de subir -->
   <a href="#top">
-    <div class="fixed-btn">Fixed</div>
+    <div class="fixed-btn">Arriba</div>
   </a>
 
 
