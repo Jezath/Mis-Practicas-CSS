@@ -1,5 +1,5 @@
 * {
-  /* outline: 1px solid red; */
+  outline: 1px solid red;
   margin: 0;
   box-sizing: border-box;
 }
@@ -17,7 +17,6 @@ body {
 /* - - - Estilos generales - - - */
 header, footer {
   width: 100%;
-
   color: #d6dbf1;
   background-color: #232946;
 }
@@ -33,10 +32,6 @@ h3 {
 p {
   font-size: 18px;
   line-height: 1.5;
-}
-
-a {
-  text-decoration: none;
 }
 
 
@@ -112,6 +107,7 @@ a {
   font-size: 20px;
   font-weight: 600;
   cursor: pointer;
+  text-decoration: none;
 
   transition: all 0.3s ease;
 }
@@ -128,14 +124,13 @@ a {
 
 /* Estilos de la imágen al lado del párrafo */
 .div-2_img {
-  /* padding: 32px; */
+  padding: 0 16px;
   display: grid;
   place-content: center;
 }
 
 .div-2_img img {
   width: 100%;
-  aspect-ratio: 1/1;
   max-width: 500px;
   height: 100%;
 }
@@ -338,23 +333,42 @@ main {
   width: min(90%, 1200px);
   height: 100%;
   margin: auto;
+  padding: 64px 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
 .info-text {
   display: flex;
   flex-wrap: wrap;
+  gap: 32px;
 }
 
 .info-text > div {
   /* max-width: 450px; */
   min-width: 250px;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  color: #232946;
 }
 
+.info-text > div p {
+  font-size: 20px;
+  line-height: 1.8;
+}
 
-/* .info-cont_img {
-  padding: 32px;
-} */
+.info-cont_img {
+  background-color: #232946;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
 
 .info-img {
   display: block;
@@ -366,7 +380,7 @@ main {
 }
 
 
-/* Sección para las animaciones de entrada */
+/* - - - Sección para las animaciones de entrada - - - */
 /* .visible {
   opacity: 1;
   animation-duration: 1s;
@@ -449,6 +463,10 @@ footer {
   .div-2_text  {
     /* <row-start> / <column-start> / <row-end> / <column-end>  */
     grid-area: 1 / 1 / 2 / 2; 
+  }
+
+  .div-2_img {
+    padding: 0;
   }
 
 }
