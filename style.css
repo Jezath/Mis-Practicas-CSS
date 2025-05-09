@@ -1,5 +1,5 @@
 * {
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
   margin: 0;
   box-sizing: border-box;
 }
@@ -152,6 +152,7 @@ main {
   display: grid;
   gap: 16px;
   margin-bottom: 64px;
+  color: #232946;
 }
 
 .main-section {
@@ -340,16 +341,16 @@ main {
   gap: 32px;
 }
 
+/* div del texto y la foto de perfil */
 .info-text {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 32px;
 }
 
 .info-text > div {
   /* max-width: 450px; */
   min-width: 250px;
-  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -362,22 +363,23 @@ main {
 }
 
 .info-cont_img {
-  background-color: #232946;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .info-img {
   display: block;
   width: 100%;
-  max-width: 450px;
+  max-width: 400px;
   aspect-ratio: 1/1;
   object-fit: cover;
+  object-position: bottom;
   filter: grayscale(0.8);
 }
+
+/* div de la parte del página web */
+
 
 
 /* - - - Sección para las animaciones de entrada - - - */
@@ -455,7 +457,7 @@ footer {
 /* - - - Media queries obligado a poner - - - */
 @media (width >= 750px) {
 
-  /* header responsive */
+  /* header - responsive */
   .div-2 {
     grid-template-columns: 1fr 1fr;
   }
@@ -469,4 +471,17 @@ footer {
     padding: 0;
   }
 
+
+  /* Seccion de acerca - responsive */
+  .info-text {
+    flex-direction: row;
+  }
+
+  .info-text > div {
+    flex: 1;
+  }
+
+  .info-cont_img {
+    flex: 1;
+  }
 }
