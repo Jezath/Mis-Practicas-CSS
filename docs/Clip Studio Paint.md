@@ -2,31 +2,41 @@
 
 ### Herramientas
 
-| Tecla(s)                     | Función                                |
+| Tecla(s)                    | Función                                |
 |-----------------------------|----------------------------------------|
-| p                           | Pluma                                  |
+| p                           | Pluma, Lápiz                           |
 | b                           | Pincel                                 |
+| g                           | Relleno, Degradado                     |
+| u                           | Figuras                                |
 | e                           | Borrador                               |
-| g                           | Relleno                             |
 | ctrl + alt + mover lápiz    | Agrandar o encoger el pincel           |
-| alt (sostenida)             | Cuentagotas                             |
+| alt (sostenida)             | Cuentagotas                            |
 | r                           | Rotar lienzo                           |
 | space                       | Mover lienzo                           |
-| del                         | Borra todo el contenido del lienzo                      |
+| del                         | Borra todo el contenido del lienzo     |
 
 ### Selección
 
-| Tecla(s)                     | Función                                |
+| Tecla(s)                    | Función                                |
 |-----------------------------|----------------------------------------|
-| m                           | Selección                              |
-| shift                       | Sumar a la selección                 |
-| alt                         | Restar de la selección                   |
+| m                           | Selección, Lazo                        |
+| w                           | Selección automática                   |
+| ctrl + shift + i            | Invertir selección                     |
+| shift                       | Sumar a la selección                   |
+| alt                         | Restar de la selección                 |
 | alt + shift                 | Multiplicar selección                  |
 | ctrl + d                    | Quitar selección                       |
 
+- `Referir a todas:` Se usa cuando el lineart está en otra capa y queremos seleccionar partes del dibujo.
+- `Referir solo a esta capa:` Se usa cuando estamos trabajando en la misma capa (quitar vista de lineart). 
+
+### Capas
+
+Para crear líneas con bordes: Propiedades de capa, Efecto de borde.
+
 ### Transformaciones
 
-| Tecla(s)                     | Función                                |
+| Tecla(s)                    | Función                                |
 |-----------------------------|----------------------------------------|
 | (Seleccionar con lazo)      | Paso previo para transformar           |
 | ctrl + t                    | Transformar selección                  |
@@ -36,20 +46,22 @@
 
 ### Máscaras
 
-| Tecla(s)                     | Función                                |
-|-----------------------------|----------------------------------------|
-| shift + press máscara      | Habilitar o deshabilitar máscara         |
-| ctrl + press máscara       | Selecciona la mácara                |
+| Tecla(s)                   | Función                                 |
+|----------------------------|-----------------------------------------|
+| shift + press máscara      | Habilitar o deshabilitar máscara        |
+| ctrl + press máscara       | Selecciona la mácara                    |
+| alt + ícono de máscara     | Crea una máscara invertida              |
 | alt + press máscara        | Muestra el área de la máscara           |
 
 ### Reglas
 
-| Tecla(s)                     | Función                                |
+| Tecla(s)                    | Función                                |
 |-----------------------------|----------------------------------------|
-| O    | Selecciona las líneas guias de los puntos de fugas       |
+| u    | Relas                                                         |
+| O    | Selecciona las líneas guias de los puntos de fugas            |
 
 ### Mezcla de colores 
 
-| Tecla(s)                     | Función                                |
+| Tecla(s)                    | Función                                |
 |-----------------------------|----------------------------------------|
-| ctrl + u    | Abre el panel de tono/saturación/luminosidad       |
+| ctrl + u    | Abre el panel de tono/saturación/luminosidad           |
