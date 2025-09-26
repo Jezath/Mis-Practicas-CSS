@@ -44,4 +44,3 @@ mi-sitio/
 | 7 | Posititon | [Position](pages/7%20-%20Position%20-%20Relative,%20Absolute,%20Fixed%20y%20Sticky/Position.md) |
 | 8 | Scroll Animation | [Scroll Animation](pages/8%20-%20Scroll%20Animation%20-%20Galería%20de%20imágenes/Scroll%20animation.md) |
 | X | Como estructurar las carpetas y archivos de un proyecto pequeño | [Estructura de carpetas](docs/Estructura%20de%20carpetas.md) |
-| O | Teclas de atajo de Clip Studio Paint | [Atajos](docs/Clip%20Studio%20Paint.md) |
